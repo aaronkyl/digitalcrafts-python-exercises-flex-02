@@ -1,7 +1,7 @@
 def word_summary(text):
     text = text.lower()
     word_dict = {}
-    word_list = text.split(' ')
+    word_list = text.replace('\n', ' ').replace('.', ' ').split(' ')
     for word in word_list:
         if word in word_dict:
             word_dict[word] += 1
